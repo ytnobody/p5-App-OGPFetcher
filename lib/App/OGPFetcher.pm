@@ -20,6 +20,7 @@ get '/ogp' => sub ($c) {
             success => 0,
             status  => $res->{status},
             message => $res->{reason},
+            content => $res->{content},
         });
         return $c->rendered(400);
     }
